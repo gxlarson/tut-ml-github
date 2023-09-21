@@ -112,8 +112,7 @@ and then again in it's test split.
 
 ##### NLP Task 3
 ```
-How many samples in the `balance` intent contain the tokens `balance`?
-How many in the `balance` intent contain the tokens `balance` and `what`?
+How many samples in the `balance` intent contain the tokens `balance`? How many in the `balance` intent contain the tokens `balance` and `what`?
 ```
 
 ## Computing Similarity Scores and Distance Metrics
@@ -130,8 +129,7 @@ jaccard(A, B) = |A \intersect B| / |A \union B|
 
 ##### NLP Task 4
 ```
-Create a function to compute the jaccard similarity between two lists.
-(In the function you can cast the lists to sets and then use Python's set operations.)
+Create a function to compute the jaccard similarity between two lists. (In the function you can cast the lists to sets and then use Python's set operations.)
 ```
 
 We can compare two texts using the Jaccard similarity by simply extracting each text's
@@ -143,8 +141,7 @@ In fact, this is what's called a ["bag-of-words"](https://en.wikipedia.org/wiki/
 
 ##### NLP Task 5
 ```
-Compute similarity scores between each of the `balance` test split samples and the
-corresopnding training split. What are some of the pairs with the highest similarity scores?
+Compute similarity scores between each of the `balance` test split samples and the corresopnding training split. What are some of the pairs with the highest similarity scores?
 ```
 
 A more sophisticated approach to computing similarity between two texts involves 
@@ -190,8 +187,7 @@ where `u * v` is the vector [dot product](https://en.wikipedia.org/wiki/Dot_prod
 
 ##### NLP Task 6
 ```
-Write a function to compute cosine similarity between two vectors.
-Compute the cosine similarity between each pair in the example above.
+Write a function to compute cosine similarity between two vectors. Compute the cosine similarity between each pair in the example above.
 ```
 
 ## Text Classification with Bag-of-Words
@@ -382,8 +378,7 @@ pprint(output)
 
 ##### NLP Task 9
 ```
-How well does the zero-shot model do in terms of accuracy on the dataset from earler?
-How well does it do on handling out-of-scope inputs?
+How well does the zero-shot model do in terms of accuracy on the dataset from earler? How well does it do on handling out-of-scope inputs?
 ```
 
 ## Other Text-based Methods
@@ -412,8 +407,7 @@ the two texts based on overlap between sequences of tokens.
 
 ##### NLP Task 10
 ```
-Try randomizing the order of one of the texts in the above code snippet and re-computing
-the ratio score. Do you observe a different ratio score?
+Try randomizing the order of one of the texts in the above code snippet and re-computing the ratio score. Do you observe a different ratio score?
 ```
 
 # Working with Images
