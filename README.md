@@ -11,8 +11,16 @@ This guide is not intended to cover all topics in depth --- there are many topic
 
 ## Contents
 [Working with Text Data](#working-with-text-data)
+ - [Computing Similarity Scores and Distance Metrics](#computing-similarity-scores-and-distance-metrics)
+ - [Text Classification with Bag-of-Words](#text-classification-with-bag-of-words)
+ - [Text Classification with Embeddings](#text-classification-with-embeddings)
+ - [Zero-Shot Classification](#zero-shot-classification)
+ - [Other Text-based Methods](#other-text-based-methods)
 
 [Working with Images](#working-with-images)
+ - [Image Embeddings](#image-embeddings)
+ - [Zero-Shot Image Classification](#zero-shot-image-classification)
+ - [Image Matching](#image-matching)
 
 # Machine Learning
 
@@ -455,7 +463,7 @@ if you compute the similarity between an image of a cat and an image of a dog.
 Try it by modifying the code above to read in an image of a dog.
 What is the cosine similarity score between the dog and one of the cats?
 
-## Image Classification (with a zero-shot model)
+## Zero-Shot Image Classification
 
 CLIP has been trained with image-text pairs so that it can learn
 relationships between text and images. One outcome of this is 
