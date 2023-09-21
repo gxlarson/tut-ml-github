@@ -106,8 +106,7 @@ for i, query in enumerate(queries):
 
 ##### NLP Task 2
 ```
-Compute the most common tokens for the `balance` intent in Clinc-150's train split,
-and then again in it's test split.
+Compute the most common tokens for the `balance` intent in Clinc-150's train split, and then again in it's test split.
 ```
 
 ##### NLP Task 3
