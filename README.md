@@ -1,4 +1,4 @@
-# tut-ml-github
+# Tutorial on ML applications to Text and Image Data
 
 This guide's purpose is to introduce new researchers to core concepts in machine learning (ML),
 natural language processing (NLP), computer vision (CV), and information retrieval (IR).
@@ -8,6 +8,11 @@ This guide will introduce core concepts, but it will also highlight certain idea
 be particularly interesting, often because I find that they are often overlooked.
 
 This guide is not intended to cover all topics in depth --- there are many topics that will not be covered here.
+
+## Contents
+[Working with Text Data](#working-with-text-data)
+
+[Working with Images](#working-with-images)
 
 # Machine Learning
 
@@ -24,7 +29,7 @@ samples is minimized. There are many learning algorithms, models, and ways of me
 This guide won't cover any of these in detail, but instead it will cover a few examples as 
 a way to get you started on using these models on real data.
 
-# Natural Language Processing
+# Working with Text Data
 
 Common machine learning tasks in the text domain include classification.
 Particular applications include sentiment analysis, where we might seek to develop a
@@ -373,7 +378,6 @@ How well does the zero-shot model do in terms of accuracy on the dataset from ea
 How well does it do on handling out-of-scope inputs?
 ```
 
-
 ## Other Text-based Methods
 Machine learning is not always the right tool to use for certain tasks.
 For instance, when computing the similarity between two texts, we could use an
@@ -601,3 +605,7 @@ from the feature locations in one image to the feature locations in the second i
 
 Try using the algorithm sketched in the snippets above using a photo of a book that you have, and an image of the cover of the book from 
 the internet. 
+
+Here is what I get:
+
+![match](data/book_cover_match.png)
