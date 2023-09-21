@@ -65,7 +65,13 @@ with open(clinc150_file, 'r') as f:
     clinc150_data = json.load(f)
 ```
 
-The data if partitioned into train, test, and evaluation "splits". 
+The data if partitioned into train, test, and validation "splits", each can be accessed with
+
+```python
+train = data['train']
+test = data['test']
+val = data['val']
+```
 
 When dealing with classification data, it's never a bad idea to analyze the distribution of
 class categories in the dataset.
