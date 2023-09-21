@@ -145,6 +145,7 @@ Compute similarity scores between each of the `balance` test split samples and t
 
 A more sophisticated approach to computing similarity between two texts involves 
 using an "embedding" method that maps text to a vector space.
+(If you're unfamiliar with vectors, I recommend Chapters 1 and 3 from [this book](https://web.stanford.edu/~boyd/vmls/vmls.pdf). 
 Examples of this approach include [word embeddings](https://en.wikipedia.org/wiki/Word_embedding) (e.g., word2vec, GLoVE, etc.)
 as well as sentence embeddings.
 For instance, a sentence embedding can map a short text into a d-dimensional vector
