@@ -68,9 +68,9 @@ with open(clinc150_file, 'r') as f:
 The data if partitioned into train, test, and validation "splits", each can be accessed with
 
 ```python
-train = data['train']
-test = data['test']
-val = data['val']
+train = clinc150_data['train']
+test = clinc150_data['test']
+val = clinc150_data['val']
 ```
 
 When dealing with classification data, it's never a bad idea to analyze the distribution of
@@ -543,6 +543,7 @@ A very basic feature detection algorithm is [corner detection](https://en.wikipe
 
 ```python
 import matplotlib.pyplot as plt
+import skimage
 from skimage import transform
 from skimage.color import rgb2gray
 from skimage.feature import match_descriptors, plot_matches, corner_peaks, corner_harris, BRIEF
@@ -575,9 +576,11 @@ The code below uses BRIEF to extract feature vectors from patches centered aroun
 ```python
 extractor = BRIEF()
 extractor.extract(img1, keypoints1)
+keypoints1 = keypoints1[extractor.mask]
 descriptors1 = extractor.descriptors
 extractor.extract(img2, keypoints2)
 descriptors2 = extractor.descriptors
+keypoints2 = keypoints2[extractor.mask]
 ```
 
 Once we have found the locations of the corner features in both images (`keypoints1` and `keypoints2`), and we have extracted feature vectors for them, we can compare these feature vectors to establish potential correspondences.
@@ -588,15 +591,13 @@ efficiently comupted using the [XOR](https://en.wikipedia.org/wiki/Exclusive_or)
 Feature pairs corresponding to high similarity scores (or low distance scores) will be
 kept as candidate matches, which can be filtered and verified at a later step.
 
-```pyhon
+```python
 matches12 = match_descriptors(descriptors1, descriptors2, max_ratio=0.8, cross_check=True)
 ```
 
 Next, we'll plot lines to connect the pairs that were found to be matches.
 
 ```python
-keypoints1 = keypoints1[extractor.mask]
-keypoints2 = keypoints2[extractor.mask]
 fig, ax = plt.subplots(nrows=1, ncols=1)
 plt.gray()
 plot_matches(ax, img1, img2, keypoints1, keypoints2, matches12)
